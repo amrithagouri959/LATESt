@@ -1,0 +1,30 @@
+{% extends "admin/base_site.html" %}
+{% load static %} 
+
+{% block extrahead %}
+    <!-- Load custom CSS -->
+    <link rel="stylesheet" href="{% static 'admin/css/custom.css' %}">
+{% endblock %}
+
+{% block extrajs %}
+    <!-- Load custom JavaScript -->
+    <script src="{% static 'admin/js/custom.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <h1>Welcome to the Admin Dashboard</h1>
+</div>
+
+<!-- Example of using card components styled by custom.css and interactive with custom.js -->
+<div class="container">
+    <div class="card">
+        <h2>Card 1: Stats Overview</h2>
+        <p>This is a sample card that will change color on hover.</p>
+    </div>
+    <div class="card">
+        <h2>Card 2: User Activity</h2>
+        <p>This is another sample card that will change color on hover.</p>
+    </div>
+</div>
+{% endblock %}
